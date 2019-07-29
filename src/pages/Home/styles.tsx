@@ -3,8 +3,7 @@ import { lighten } from 'polished';
 
 import colors from '../../styles/colors';
 
-export const Container = styled.div`
-`;
+export const Container = styled.div``;
 
 export const Streams = styled.ul`
   display: grid;
@@ -14,8 +13,11 @@ export const Streams = styled.ul`
   margin-top: 30px;
 `;
 
-export const Stream = styled.ul`
+export const Stream = styled.li`
+  display: flex;
+  flex-direction: column;
   width: 300px;
+  position: relative;
 `;
 
 export const StreamPreview = styled.div`
@@ -33,11 +35,11 @@ export const StreamPreview = styled.div`
     justify-items: center;
     border-radius: 4px;
     padding: 3px 4px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border: 0;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
 
     span {
       margin-left: 4px;
@@ -73,7 +75,8 @@ export const StreamInfo = styled.div`
 export const RaidCopy = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: auto;
 
   input {
     height: 30px;
@@ -101,5 +104,6 @@ export const RaidCopy = styled.div`
     :hover {
       background: ${lighten(0.05, colors.first)};
     }
+    
   }
 `;

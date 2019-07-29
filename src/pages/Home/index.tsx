@@ -10,11 +10,11 @@ import {
 } from './styles';
 
 interface Stream {
-  community_ids: string[]
   game_id: string
   id: string
   language: string
-  pagination: string
+  preview: string
+  raidCopy: string
   started_at: string
   tag_ids: string
   thumbnail_url: string
@@ -30,119 +30,52 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     async function fetchStreams() {
-      // try {
-      //   const response = await api.get('/streams?game_id=509670&language=pt');
+      try {
+        const response = await api.get('/streams?game_id=509670&language=pt');
+        const data = response.data.data.map((item: Stream) => ({
+          ...item,
+          preview: `https://static-cdn.jtvnw.net/previews-ttv/live_user_${item.user_name.toLowerCase()}-300x180.jpg`,
+          raidCopy: `/raid ${item.user_name}`,
+        }));
 
-      //   setStreams(response.data);
-      // } catch (err) {
-      //   console.log('Error', err);
-      // }
-
+        setStreams(data);
+      } catch (err) {
+        console.log('Error', err);
+      }
     }
 
     fetchStreams();
   }, []);
 
+  function handleCopy(value: string) {
+    navigator.clipboard.writeText(value);
+  }
 
   return (
     <Container>
       <Header />
       <Streams>
-        <Stream>
-          <StreamPreview>
-            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
-            <div>
-              <IoMdEye size={14} color="#fff" />
-              <span>180200</span>
-            </div>
-          </StreamPreview>
-          <StreamInfo>
-            <a href="https://www.twitch.tv/userid">
-              <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
-            </a>
-            <span>XBeowulf</span>
-          </StreamInfo>
-          <RaidCopy>
-            <input type="text" value="/raid XBeowulf" readOnly />
-            <button type="button">Copiar</button>
-          </RaidCopy>
-        </Stream>
-        <Stream>
-          <StreamPreview>
-            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
-            <div>
-              <IoMdEye size={14} color="#fff" />
-              <span>182</span>
-            </div>
-          </StreamPreview>
-          <StreamInfo>
-            <a href="https://www.twitch.tv/userid">
-              <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
-            </a>
-            <span>XBeowulf</span>
-          </StreamInfo>
-          <RaidCopy>
-            <input type="text" value="/raid XBeowulf" readOnly />
-            <button type="button">Copiar</button>
-          </RaidCopy>
-        </Stream>
-        <Stream>
-          <StreamPreview>
-            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
-            <div>
-              <IoMdEye size={14} color="#fff" />
-              <span>182</span>
-            </div>
-          </StreamPreview>
-          <StreamInfo>
-            <a href="https://www.twitch.tv/userid">
-              <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
-            </a>
-            <span>XBeowulf</span>
-          </StreamInfo>
-          <RaidCopy>
-            <input type="text" value="/raid XBeowulf" readOnly />
-            <button type="button">Copiar</button>
-          </RaidCopy>
-        </Stream>
-        <Stream>
-          <StreamPreview>
-            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
-            <div>
-              <IoMdEye size={14} color="#fff" />
-              <span>182</span>
-            </div>
-          </StreamPreview>
-          <StreamInfo>
-            <a href="https://www.twitch.tv/userid">
-              <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
-            </a>
-            <span>XBeowulf</span>
-          </StreamInfo>
-          <RaidCopy>
-            <input type="text" value="/raid XBeowulf" readOnly />
-            <button type="button">Copiar</button>
-          </RaidCopy>
-        </Stream>
-        <Stream>
-          <StreamPreview>
-            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
-            <div>
-              <IoMdEye size={14} color="#fff" />
-              <span>182</span>
-            </div>
-          </StreamPreview>
-          <StreamInfo>
-            <a href="https://www.twitch.tv/userid">
-              <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
-            </a>
-            <span>XBeowulf</span>
-          </StreamInfo>
-          <RaidCopy>
-            <input type="text" value="/raid XBeowulf" readOnly />
-            <button type="button">Copiar</button>
-          </RaidCopy>
-        </Stream>
+        {streams.map(stream => (
+          <Stream key={stream.id}>
+            <StreamPreview>
+              <img src={stream.preview} alt={stream.user_name} />
+              <div>
+                <IoMdEye size={14} color="#fff" />
+                <span>{stream.viewer_count}</span>
+              </div>
+            </StreamPreview>
+            <StreamInfo>
+              <a href={`https://www.twitch.tv/${stream.user_name}`}>
+                <strong>{stream.title}</strong>
+              </a>
+              <span>{stream.user_name}</span>
+            </StreamInfo>
+            <RaidCopy>
+              <input type="text" id="input" value={stream.raidCopy} readOnly />
+              <button type="button" onClick={() => handleCopy(stream.raidCopy)}>Copiar</button>
+            </RaidCopy>
+          </Stream>
+        ))}
       </Streams>
     </Container>
 
