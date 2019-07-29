@@ -59,21 +59,30 @@ const Home: React.FC = () => {
         {streams.map(stream => (
           <Stream key={stream.id}>
             <StreamPreview>
-              <img src={stream.preview} alt={stream.user_name} />
+              <img src={stream.preview} alt="" aria-hidden="true" />
               <div>
-                <IoMdEye size={14} color="#fff" />
+                <IoMdEye size={14} color="#fff" aria-hidden="true" />
                 <span>{stream.viewer_count}</span>
               </div>
             </StreamPreview>
             <StreamInfo>
-              <a href={`https://www.twitch.tv/${stream.user_name}`}>
+              <a
+                href={`https://www.twitch.tv/${stream.user_name}`}
+                title={`Abrir stream de ${stream.user_name} na Twitch`}
+              >
                 <strong>{stream.title}</strong>
               </a>
               <span>{stream.user_name}</span>
             </StreamInfo>
             <RaidCopy>
               <input type="text" id="input" value={stream.raidCopy} readOnly />
-              <button type="button" onClick={() => handleCopy(stream.raidCopy)}>Copiar</button>
+              <button
+                type="button"
+                onClick={() => handleCopy(stream.raidCopy)}
+                aria-label={`Copiar comando para enviar raid para ${stream.user_name} na Twitch`}
+              >
+                Copiar
+              </button>
             </RaidCopy>
           </Stream>
         ))}

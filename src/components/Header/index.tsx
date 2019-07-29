@@ -6,7 +6,7 @@ import { Container } from './styles';
 const Header: React.FC = () => (
   <Container>
     <header>
-      <Link to="/">
+      <Link to="/" aria-label="Página inicial">
         <h1>RAIDAR</h1>
       </Link>
       <span>Streams de tecnologia em português</span>
