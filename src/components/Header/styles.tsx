@@ -9,12 +9,13 @@ export const Container = styled.div`
     a {
       h1 {
         color: ${colors.first};
-        font-size: 30px;
+        font-size: 36px;
       }
     }
 
     span {
       color: ${colors.gray[600]};
+      font-size: 18px;
     }
   }
 `;
