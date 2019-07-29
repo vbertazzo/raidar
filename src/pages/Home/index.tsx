@@ -4,6 +4,7 @@ import { IoMdEye } from 'react-icons/io';
 import api from '../../services/api';
 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import {
  Container, Streams, Stream, StreamPreview, StreamInfo, RaidCopy,
@@ -77,6 +78,7 @@ const Home: React.FC = () => {
           </Stream>
         ))}
       </Streams>
+      <Footer />
     </Container>
 
   );
