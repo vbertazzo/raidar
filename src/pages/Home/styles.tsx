@@ -10,6 +10,7 @@ export const Streams = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 50px;
+  grid-column-gap: 20px;
   margin-top: 30px;
 `;
 
