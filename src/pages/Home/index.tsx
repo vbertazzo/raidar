@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { IoMdEye } from 'react-icons/io';
 
 import api from '../../services/api';
 
 import Header from '../../components/Header';
 
 import {
- Container, Streams, Stream, StreamInfo, RaidCopy,
+ Container, Streams, Stream, StreamPreview, StreamInfo, RaidCopy,
 } from './styles';
 
 interface Stream {
@@ -48,7 +49,13 @@ const Home: React.FC = () => {
       <Header />
       <Streams>
         <Stream>
-          <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-300x180.jpg" alt="" />
+          <StreamPreview>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
+            <div>
+              <IoMdEye size={14} color="#fff" />
+              <span>180200</span>
+            </div>
+          </StreamPreview>
           <StreamInfo>
             <a href="https://www.twitch.tv/userid">
               <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
@@ -61,7 +68,13 @@ const Home: React.FC = () => {
           </RaidCopy>
         </Stream>
         <Stream>
-          <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-300x180.jpg" alt="" />
+          <StreamPreview>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
+            <div>
+              <IoMdEye size={14} color="#fff" />
+              <span>182</span>
+            </div>
+          </StreamPreview>
           <StreamInfo>
             <a href="https://www.twitch.tv/userid">
               <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
@@ -74,7 +87,13 @@ const Home: React.FC = () => {
           </RaidCopy>
         </Stream>
         <Stream>
-          <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-300x180.jpg" alt="" />
+          <StreamPreview>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
+            <div>
+              <IoMdEye size={14} color="#fff" />
+              <span>182</span>
+            </div>
+          </StreamPreview>
           <StreamInfo>
             <a href="https://www.twitch.tv/userid">
               <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
@@ -87,7 +106,13 @@ const Home: React.FC = () => {
           </RaidCopy>
         </Stream>
         <Stream>
-          <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-300x180.jpg" alt="" />
+          <StreamPreview>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
+            <div>
+              <IoMdEye size={14} color="#fff" />
+              <span>182</span>
+            </div>
+          </StreamPreview>
           <StreamInfo>
             <a href="https://www.twitch.tv/userid">
               <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>
@@ -100,7 +125,13 @@ const Home: React.FC = () => {
           </RaidCopy>
         </Stream>
         <Stream>
-          <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-300x180.jpg" alt="" />
+          <StreamPreview>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_eduardorfs-500x340.jpg" alt="" />
+            <div>
+              <IoMdEye size={14} color="#fff" />
+              <span>182</span>
+            </div>
+          </StreamPreview>
           <StreamInfo>
             <a href="https://www.twitch.tv/userid">
               <strong>[BR/ENG] STENCYL: TESTANDO ALGUMA COISA TITULO COMPRIDO DEMAIS</strong>

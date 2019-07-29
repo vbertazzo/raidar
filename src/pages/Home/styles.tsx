@@ -17,10 +17,38 @@ export const Stream = styled.ul`
   width: 300px;
 `;
 
+export const StreamPreview = styled.div`
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 180px;
+    border-radius: 4px;
+  }
+  
+  div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 4px;
+    padding: 3px 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    span {
+      margin-left: 4px;
+      color: ${colors.white}
+    }
+  }
+`;
+
 export const StreamInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 10px 0 15px;
   
   a {
     margin-bottom: 10px;
@@ -28,6 +56,10 @@ export const StreamInfo = styled.div`
     strong {
       color: ${colors.gray[300]};
       font-size: 16px;
+
+      :hover {
+      color: ${colors.first};
+    }
     }
   }
 
