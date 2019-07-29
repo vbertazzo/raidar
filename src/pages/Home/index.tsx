@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { IoMdEye } from 'react-icons/io';
+import { ClipLoader } from 'react-spinners';
 
 import api from '../../services/api';
+import colors from '../../styles/colors';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import {
- Container, Streams, Stream, StreamPreview, StreamInfo, RaidCopy,
+  LoaderContainer, Container, Streams, Stream, StreamPreview, StreamInfo, RaidCopy,
 } from './styles';
 
 interface Stream {
@@ -28,6 +30,7 @@ interface Stream {
 
 const Home: React.FC = () => {
   const [streams, setStreams] = useState<Stream[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchStreams() {
@@ -43,6 +46,7 @@ const Home: React.FC = () => {
       } catch (err) {
         console.log('Error', err);
       }
+      setLoading(false);
     }
 
     fetchStreams();
@@ -50,6 +54,19 @@ const Home: React.FC = () => {
 
   function handleCopy(value: string) {
     navigator.clipboard.writeText(value);
+  }
+
+  if (loading) {
+    return (
+      <LoaderContainer>
+        <ClipLoader
+          sizeUnit="px"
+          size={40}
+          color={colors.first}
+          loading={loading}
+        />
+      </LoaderContainer>
+    );
   }
 
   return (
@@ -75,7 +92,13 @@ const Home: React.FC = () => {
               <span>{stream.user_name}</span>
             </StreamInfo>
             <RaidCopy>
-              <input type="text" id="input" value={stream.raidCopy} readOnly />
+              <input
+                type="text"
+                id="input"
+                value={stream.raidCopy}
+                aria-label={`Comando para enviar raid para ${stream.user_name} na Twitch`}
+                readOnly
+              />
               <button
                 type="button"
                 onClick={() => handleCopy(stream.raidCopy)}

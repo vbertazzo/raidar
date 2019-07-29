@@ -3,6 +3,13 @@ import { lighten } from 'polished';
 
 import colors from '../../styles/colors';
 
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+`;
+
 export const Container = styled.div``;
 
 export const Streams = styled.ul`
@@ -27,6 +34,7 @@ export const StreamPreview = styled.div`
     width: 100%;
     height: 180px;
     border-radius: 4px;
+    background: ${colors.gray[700]};
   }
   
   div {
