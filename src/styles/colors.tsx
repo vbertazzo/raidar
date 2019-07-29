@@ -5,7 +5,7 @@ export default {
   white: '#fff',
   error: '#c53030',
   success: '#2f855a',
-  first: '#cc0067',
+  first: '#e61c5d',
   second: '#0f0e11',
   third: '#e21212',
 
