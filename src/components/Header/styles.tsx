@@ -9,6 +9,7 @@ export const Container = styled.div`
     h1 {
       color: ${colors.first};
       font-size: 36px;
+      font-weight: 900;
     }
 
     span {

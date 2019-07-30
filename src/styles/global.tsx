@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import colors from './colors';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 
   * {
     margin: 0;

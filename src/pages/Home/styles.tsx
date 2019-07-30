@@ -127,6 +127,7 @@ export const RaidCopy = styled.div`
     }
 
     :after {
+      font-weight: 500;
       content: 'COPIAR';
     }
 
