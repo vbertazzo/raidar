@@ -11,7 +11,6 @@ export const Container = styled.div`
       font-size: 36px;
     }
 
-
     span {
       color: ${colors.gray[600]};
       font-size: 18px;
