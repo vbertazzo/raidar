@@ -87,7 +87,7 @@ export const RaidCopy = styled.div`
   margin-top: auto;
 
   input {
-    height: 30px;
+    height: 36px;
     width: 100%;
     border-radius: 4px;
     border-top-right-radius: 0px;
@@ -101,16 +101,26 @@ export const RaidCopy = styled.div`
 
   button {
     align-self: center;
-    height: 30px;
+    height: 36px;
     border: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     background: ${colors.first};
     color: ${colors.second};
-    padding: 5px;
+    padding: 5px 10px;
+    min-width: 70px;
 
     :hover {
       background: ${lighten(0.05, colors.first)};
+    }
+
+    :after {
+      content: 'COPIAR';
+    }
+
+    :focus:after {
+      font-size: 18px;
+      content: '👍';
     }
     
   }

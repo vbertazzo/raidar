@@ -10,7 +10,13 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import {
-  LoaderContainer, Container, Streams, Stream, StreamPreview, StreamInfo, RaidCopy,
+  LoaderContainer,
+  Container,
+  Streams,
+  Stream,
+  StreamPreview,
+  StreamInfo,
+  RaidCopy,
 } from './styles';
 
 interface Stream {
@@ -107,9 +113,7 @@ const Home: React.FC = () => {
                 type="button"
                 onClick={() => handleCopy(stream.raidCopy)}
                 aria-label={`Copiar comando para enviar raid para ${stream.user_name} na Twitch`}
-              >
-                Copiar
-              </button>
+              />
             </RaidCopy>
           </Stream>
         ))}
