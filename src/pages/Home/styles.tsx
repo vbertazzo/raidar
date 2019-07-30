@@ -18,6 +18,16 @@ export const Streams = styled.ul`
   grid-row-gap: 50px;
   grid-column-gap: 20px;
   margin-top: 30px;
+
+  @media (max-width: 970px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  @media (max-width: 660px) {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 `;
 
 export const Stream = styled.li`
