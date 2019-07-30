@@ -94,8 +94,9 @@ export const RaidCopy = styled.div`
     border-bottom-right-radius: 0px;
     background: ${colors.transparent};
     border: 1px solid ${colors.first};
+    border-right: none;
     color: ${colors.first};
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: bold;
   }
 
@@ -109,6 +110,7 @@ export const RaidCopy = styled.div`
     color: ${colors.second};
     padding: 5px 10px;
     min-width: 70px;
+    transition: background 0.2s;
 
     :hover {
       background: ${lighten(0.05, colors.first)};

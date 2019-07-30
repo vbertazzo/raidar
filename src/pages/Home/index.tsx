@@ -86,7 +86,12 @@ const Home: React.FC = () => {
         {streams.map(stream => (
           <Stream key={stream.id}>
             <StreamPreview>
-              <img src={stream.preview} alt="" aria-hidden="true" />
+              <a
+                href={`https://www.twitch.tv/${stream.user_name}`}
+                title={`Abrir stream de ${stream.user_name} na Twitch`}
+              >
+                <img src={stream.preview} alt="" aria-hidden="true" />
+              </a>
               <div>
                 <IoMdEye size={14} color={colors.white} aria-hidden="true" />
                 <span>{stream.viewer_count}</span>
