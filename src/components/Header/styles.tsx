@@ -6,12 +6,11 @@ export const Container = styled.div`
   header {
     margin-top: 50px;
 
-    a {
-      h1 {
-        color: ${colors.first};
-        font-size: 36px;
-      }
+    h1 {
+      color: ${colors.first};
+      font-size: 36px;
     }
+
 
     span {
       color: ${colors.gray[600]};
