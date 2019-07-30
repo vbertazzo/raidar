@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IoMdEye } from 'react-icons/io';
 import { ClipLoader } from 'react-spinners';
+import { toast } from 'react-toastify';
 
 import api from '../../services/api';
 import colors from '../../styles/colors';
@@ -44,7 +45,7 @@ const Home: React.FC = () => {
 
         setStreams(data);
       } catch (err) {
-        console.log('Error', err);
+        toast.error('Erro ao comunicar com a API do Twitch. Tente novamente.');
       }
       setLoading(false);
     }
@@ -53,7 +54,10 @@ const Home: React.FC = () => {
   }, []);
 
   function handleCopy(value: string) {
-    navigator.clipboard.writeText(value);
+    navigator.clipboard.writeText(value)
+      .catch(() => {
+        toast.error('Falha ao copiar. Tente novamente.');
+      });
   }
 
   if (loading) {
@@ -78,7 +82,7 @@ const Home: React.FC = () => {
             <StreamPreview>
               <img src={stream.preview} alt="" aria-hidden="true" />
               <div>
-                <IoMdEye size={14} color="#fff" aria-hidden="true" />
+                <IoMdEye size={14} color={colors.white} aria-hidden="true" />
                 <span>{stream.viewer_count}</span>
               </div>
             </StreamPreview>
