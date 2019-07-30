@@ -10,6 +10,11 @@ export const LoaderContainer = styled.div`
   height: 600px;
 `;
 
+export const NoResults = styled.h2`
+  margin-top: 50px;
+  color: ${colors.gray[300]};
+`;
+
 export const Container = styled.div``;
 
 export const Streams = styled.ul`
