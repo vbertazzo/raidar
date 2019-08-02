@@ -65,11 +65,10 @@ const Home: React.FC = () => {
     fetchStreams();
   }, []);
 
-  function handleCopy(value: string) {
-    navigator.clipboard.writeText(value)
-      .catch(() => {
-        toast.error('Falha ao copiar. Tente novamente.');
-      });
+  function handleCopy(streamID: string) {
+    const copyContent = document.getElementById(streamID) as HTMLInputElement;
+    copyContent.select();
+    document.execCommand('copy');
   }
 
   if (loading) {
@@ -93,53 +92,51 @@ const Home: React.FC = () => {
           Que pena, nenhuma stream online no momento.
           <span role="img" aria-label="Koala"> 😢</span>
         </NoResults>
-        ) : (
-          <Streams>
-            {streams.map(stream => (
-              <Stream key={stream.id}>
-                <StreamPreview>
-                  <a
-                    href={`https://www.twitch.tv/${stream.user_name}`}
-                    title={`Abrir stream de ${stream.user_name} na Twitch`}
-                  >
-                    <img src={stream.preview} alt="" aria-hidden="true" />
-                  </a>
-                  <div>
-                    <IoMdEye size={14} color={colors.white} aria-hidden="true" />
-                    <span>{stream.viewer_count}</span>
-                  </div>
-                </StreamPreview>
-                <StreamInfo>
-                  <a
-                    href={`https://www.twitch.tv/${stream.user_name}`}
-                    title={`Abrir stream de ${stream.user_name} na Twitch`}
-                  >
-                    <strong>{stream.title}</strong>
-                  </a>
-                  <span>{stream.user_name}</span>
-                </StreamInfo>
-                <RaidCopy>
-                  <input
-                    type="text"
-                    id="input"
-                    value={stream.raidCopy}
-                    aria-label={`Comando para enviar raid para ${stream.user_name} na Twitch`}
-                    readOnly
-                  />
-                  <button
-                    type="button"
-                    onClick={() => handleCopy(stream.raidCopy)}
-                    aria-label={`Copiar comando para enviar raid para ${stream.user_name} na Twitch`}
-                  />
-                </RaidCopy>
-              </Stream>
-            ))}
-          </Streams>
-        )
-      }
+      ) : (
+        <Streams>
+          {streams.map(stream => (
+            <Stream key={stream.id}>
+              <StreamPreview>
+                <a
+                  href={`https://www.twitch.tv/${stream.user_name}`}
+                  title={`Abrir stream de ${stream.user_name} na Twitch`}
+                >
+                  <img src={stream.preview} alt="" aria-hidden="true" />
+                </a>
+                <div>
+                  <IoMdEye size={14} color={colors.white} aria-hidden="true" />
+                  <span>{stream.viewer_count}</span>
+                </div>
+              </StreamPreview>
+              <StreamInfo>
+                <a
+                  href={`https://www.twitch.tv/${stream.user_name}`}
+                  title={`Abrir stream de ${stream.user_name} na Twitch`}
+                >
+                  <strong>{stream.title}</strong>
+                </a>
+                <span>{stream.user_name}</span>
+              </StreamInfo>
+              <RaidCopy>
+                <input
+                  type="text"
+                  id={stream.id}
+                  value={stream.raidCopy}
+                  aria-label={`Comando para enviar raid para ${stream.user_name} na Twitch`}
+                  readOnly
+                />
+                <button
+                  type="button"
+                  onClick={() => handleCopy(stream.id)}
+                  aria-label={`Copiar comando para enviar raid para ${stream.user_name} na Twitch`}
+                />
+              </RaidCopy>
+            </Stream>
+          ))}
+        </Streams>
+      )}
       <Footer />
     </Container>
-
   );
 };
 

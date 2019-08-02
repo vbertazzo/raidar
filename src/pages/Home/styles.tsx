@@ -128,18 +128,12 @@ export const RaidCopy = styled.div`
     transition: background 0.2s;
 
     :hover {
-      background: ${lighten(0.05, colors.first)};
+      background: ${lighten(0.12, colors.first)};
     }
 
-    :after {
+    ::after {
       font-weight: 500;
       content: 'COPIAR';
     }
-
-    :focus:after {
-      font-size: 18px;
-      content: '👍';
-    }
-    
   }
 `;
