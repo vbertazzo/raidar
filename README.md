@@ -65,7 +65,7 @@ In order to receive information from the Twitch API, you'll need to have a [Twit
 
 3. Rename the `.env.example` file to `.env.local`.
 
-4. Add your "Client ID" value to `.env.local` file and you're good to go.
+4. Add the `Client ID` value from the Twitch Developer Dashboard to `.env.local` file and you're good to go.
 
 ## 📝 License
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
