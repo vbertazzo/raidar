@@ -29,6 +29,7 @@ This project was developed with the following technologies:
 
 -  [ReactJS](https://reactjs.org/)
 -  [Typescript](https://www.typescriptlang.org/)
+-  [Twitch.tv API](https://dev.twitch.tv/docs/api/)
 -  [React Router](https://github.com/ReactTraining/react-router)
 -  [styled-components](https://www.styled-components.com/)
 -  [Axios](https://github.com/axios/axios)
