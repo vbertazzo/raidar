@@ -90,7 +90,7 @@ const Home: React.FC = () => {
       {!hasResults ? (
         <NoResults>
           Que pena, nenhuma stream online no momento.
-          <span role="img" aria-label="Koala"> 😢</span>
+          <span role="img" aria-label="Crying Face"> 😢</span>
         </NoResults>
       ) : (
         <Streams>
