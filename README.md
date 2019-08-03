@@ -1,44 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Raidar" src="https://res.cloudinary.com/voss/image/upload/v1564853274/readme_logos/logo_2x_fvfyi5.png" />
+    <br>
+</h1>
 
-## Available Scripts
+<h4 align="center">
+  Twitch's Technology Streams in Portuguese Hub
+</h4>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/vbertazzo/raidar.svg">
 
-In the project directory, you can run:
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vbertazzo/raidar.svg">
 
-### `npm start`
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/vbertazzo/raidar.svg">
+  <a href="https://github.com/vbertazzo/raidar.svg/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vbertazzo/raidar.svg">
+  </a>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="https://github.com/vbertazzo/raidar.svg/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/vbertazzo/raidar.svg">
+  </a>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+  <img alt="GitHub" src="https://img.shields.io/github/license/vbertazzo/raidar">
+</p>
 
-### `npm test`
+## 🚀 Technologies
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was developed with the following technologies:
 
-### `npm run build`
+-  [ReactJS](https://reactjs.org/)
+-  [Typescript](https://www.typescriptlang.org/)
+-  [React Router](https://github.com/ReactTraining/react-router)
+-  [styled-components](https://www.styled-components.com/)
+-  [Axios](https://github.com/axios/axios)
+-  [Polished](https://polished.js.org/)
+-  [React-Toastify](https://fkhadra.github.io/react-toastify/)
+-  [React-Icons](http://react-icons.github.io/react-icons/)
+-  [React-Spinners](https://www.react-spinners.com/)
+-  [VS Code](https://code.visualstudio.com/) / [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📜 Usage
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16](https://nodejs.org/) or higher + [Yarn v1.13](https://yarnpkg.com/) or higher installed on your computer. From your command line:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clone this repository
+$ git clone https://github.com/vbertazzo/raidar.git
 
-### `npm run eject`
+# Go into the repository
+$ cd raidar
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Install dependencies
+$ yarn install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Run the app
+$ yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📝 License
+This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> 🐨 [bertazzo.me](https://bertazzo.me) &nbsp;&middot;&nbsp;
+> GitHub [@vbertazzo](https://github.com/vbertazzo) &nbsp;&middot;&nbsp;
+> Twitter [@vtazzo](https://twitter.com/vtazzo)
