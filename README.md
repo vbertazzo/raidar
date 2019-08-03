@@ -57,6 +57,16 @@ $ yarn install
 $ yarn start
 ```
 
+In order to receive information from the Twitch API, you'll need to have a [Twitch](https://www.twitch.tv/) account. 
+
+1. Register an account on [Twitch](https://www.twitch.tv/).
+
+2. Access the [developer dashboard](https://dev.twitch.tv/console) and register an application.
+
+3. Rename the `.env.example` file to `.env.local`.
+
+4. Add your "Client ID" value to `.env.local` file and you're good to go.
+
 ## 📝 License
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
 
