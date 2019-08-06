@@ -27,17 +27,17 @@
 
 This project was developed with the following technologies:
 
--  [ReactJS](https://reactjs.org/)
--  [Typescript](https://www.typescriptlang.org/)
--  [Twitch.tv API](https://dev.twitch.tv/docs/api/)
--  [React Router](https://github.com/ReactTraining/react-router)
--  [styled-components](https://www.styled-components.com/)
--  [Axios](https://github.com/axios/axios)
--  [Polished](https://polished.js.org/)
--  [React-Toastify](https://fkhadra.github.io/react-toastify/)
--  [React-Icons](http://react-icons.github.io/react-icons/)
--  [React-Spinners](https://www.react-spinners.com/)
--  [VS Code](https://code.visualstudio.com/) / [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Twitch.tv API](https://dev.twitch.tv/docs/api/)
+- [React Router](https://github.com/ReactTraining/react-router)
+- [styled-components](https://www.styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [Polished](https://polished.js.org/)
+- [React-Toastify](https://fkhadra.github.io/react-toastify/)
+- [React-Icons](http://react-icons.github.io/react-icons/)
+- [React-Spinners](https://www.react-spinners.com/)
+- [VS Code](https://code.visualstudio.com/) / [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## 📜 Usage
 
@@ -57,7 +57,7 @@ $ yarn install
 $ yarn start
 ```
 
-In order to receive information from the Twitch API, you'll need to have a [Twitch](https://www.twitch.tv/) account. 
+In order to receive information from the Twitch API, you'll need to have a [Twitch](https://www.twitch.tv/) account.
 
 1. Register an account on [Twitch](https://www.twitch.tv/).
 
@@ -68,7 +68,8 @@ In order to receive information from the Twitch API, you'll need to have a [Twit
 4. Add the `Client ID` value from the Twitch Developer Dashboard to `.env.local` file and you're good to go.
 
 ## 📝 License
-This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
+
+This project is [MIT](https://github.com/vbertazzo/raidar/blob/master/LICENSE) licensed.
 
 ---
 
